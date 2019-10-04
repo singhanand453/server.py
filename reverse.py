@@ -1,6 +1,6 @@
 import socket
 import sys
-
+import os
 def create_socket():
     try:
         global host
@@ -43,7 +43,7 @@ def send_command(conn):
         if len(str.encode(cmd)) > 0:
             conn.send(str.encode(cmd))
             client_response= str(conn.recv(1024), 'utf-8')
-            print(client_response , end="")
+            print(client_response , end=" ")
 
 def main():
     create_socket()

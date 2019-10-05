@@ -23,7 +23,7 @@ def bind_socket():
         s.listen(5)
 
     except socket.error as msg:
-        print("socket binding error\" + str(msg) + "\n" +"Retrying")
+        print("socket binding error" + str(msg) + "\n" +"Retrying")
         bind_socket()
 
 def socket_accept():

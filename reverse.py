@@ -23,12 +23,12 @@ def bind_socket():
         s.listen(5)
 
     except socket.error as msg:
-        print("socket binding error" + str(msg) + "\n" +"Retrying")
+        print("socket binding error\" + str(msg) + "\n" +"Retrying")
         bind_socket()
 
 def socket_accept():
     conn,address =s.accept()
-    print("connection has been established!.." + " IP" + address[0] + " | Port" + str(address[1]))
+    print("connection  established!.." + " IP" + address[0] + " | Port" + str(address[1]))
     send_command(conn)
     conn.close()
 

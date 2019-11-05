@@ -18,12 +18,12 @@ def bind_socket():
         global host
         global port
         global s
-        print("Binding port: " + str(port))
+        print("port Binding: " + str(port))
         s.bind((host, port))
         s.listen(5)
 
     except socket.error as msg:
-        print("socket binding error.." + str(msg) + "\n" +"Retrying")
+        print("socket binding error.." + str(msg) + "\n" +"Retrying.. Retrying!..")
         bind_socket()
 
 def socket_accept():

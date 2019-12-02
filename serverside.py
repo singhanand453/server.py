@@ -11,14 +11,14 @@ def create_socket():
         s=socket.socket()
 
     except socket.error as msg:
-        print("socket creation error:" + str(msg))
+        print(" display socket creation error:" + str(msg))
 
 def bind_socket():
     try:
         global host
         global port
         global s
-        print("port Binding: " + str(port))
+        print("port Binding....: " + str(port))
         s.bind((host, port))
         s.listen(5)
 
@@ -28,7 +28,7 @@ def bind_socket():
 
 def socket_accept():
     conn,address =s.accept()
-    print("connection  established!.." + " IP" + address[0] + " | Port" + str(address[1]))
+    print("connection  established! success.." + " IP" + address[0] + " | Port" + str(address[1]))
     send_command(conn)
     conn.close()
 
